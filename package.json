@@ -1,0 +1,23 @@
+{
+  "name": "crowdfunding-platform",
+  "version": "1.0.0",
+  "description": "Production-grade all-or-nothing crowdfunding platform with MySQL stored procedures and triggers",
+  "private": true,
+  "scripts": {
+    "db:start": "bash ./scripts/start-mysql.sh",
+    "db:stop": "bash ./scripts/stop-mysql.sh",
+    "db:init": "node ./scripts/init-db.js",
+    "db:check": "node ./scripts/check-db.js",
+    "db:backup": "bash ./scripts/backup-db.sh",
+    "expire": "node ./backend/src/utils/expireJob.js",
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix backend run test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5"
+  }
+}
+

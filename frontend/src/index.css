@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #0b1115;
+}
+
+.dark-theme {
+  --page-bg: #0b1115;
+  --surface: #111b20;
+  --surface-raised: #17242a;
+  --border: #26363d;
+  --text-primary: #f1f5f6;
+  --text-secondary: #c1cdd1;
+  background-color: var(--page-bg);
+  color: var(--text-primary);
+}
+
+.dark-theme .bg-white,
+.dark-theme [class~="bg-white/90"],
+.dark-theme [class~="bg-white/95"] {
+  background-color: var(--surface);
+}
+
+.dark-theme .bg-gray-50,
+.dark-theme [class~="bg-gray-50/80"],
+.dark-theme [class~="bg-gray-50/60"],
+.dark-theme [class~="bg-gray-50/40"],
+.dark-theme .bg-gray-100 {
+  background-color: var(--surface-raised);
+}
+
+.dark-theme .bg-gray-200 {
+  background-color: #26363d;
+}
+
+.dark-theme .bg-gray-900 {
+  background-color: #070c0f;
+}
+
+.dark-theme .bg-brand-50,
+.dark-theme .bg-emerald-50 {
+  background-color: #12352c;
+}
+
+.dark-theme .bg-blue-50 {
+  background-color: #142b3c;
+}
+
+.dark-theme .bg-amber-50 {
+  background-color: #382d17;
+}
+
+.dark-theme .bg-rose-50 {
+  background-color: #3a2024;
+}
+
+.dark-theme .bg-purple-50 {
+  background-color: #2b2040;
+}
+
+.dark-theme .bg-teal-50 {
+  background-color: #123332;
+}
+
+.dark-theme .bg-rose-100 {
+  background-color: #49282d;
+}
+
+.dark-theme .bg-blue-100 {
+  background-color: #1c344b;
+}
+
+.dark-theme .bg-emerald-100,
+.dark-theme .bg-brand-100 {
+  background-color: #174436;
+}
+
+.dark-theme .bg-purple-100 {
+  background-color: #36264e;
+}
+
+.dark-theme .bg-amber-100 {
+  background-color: #493919;
+}
+
+.dark-theme .bg-teal-100 {
+  background-color: #17413e;
+}
+
+.dark-theme .text-gray-900,
+.dark-theme .text-gray-800,
+.dark-theme .text-slate-950,
+.dark-theme .text-slate-900,
+.dark-theme .text-slate-800 {
+  color: var(--text-primary);
+}
+
+.dark-theme .text-gray-700,
+.dark-theme .text-gray-600,
+.dark-theme .text-slate-700,
+.dark-theme .text-slate-600 {
+  color: var(--text-secondary);
+}
+
+.dark-theme .text-gray-500,
+.dark-theme .text-gray-400 {
+  color: #8d9ba1;
+}
+
+.dark-theme .text-brand-600,
+.dark-theme .text-brand-700 {
+  color: #48d7a1;
+}
+
+.dark-theme .border-gray-100,
+.dark-theme .border-gray-200,
+.dark-theme .border-gray-300,
+.dark-theme .border-white,
+.dark-theme [class~="border-white/80"] {
+  border-color: var(--border);
+}
+
+.dark-theme .divide-gray-100 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--border);
+}
+
+.dark-theme input,
+.dark-theme textarea,
+.dark-theme select {
+  border-color: var(--border);
+  background-color: #0d171b;
+  color: var(--text-primary);
+}
+
+.dark-theme input::placeholder,
+.dark-theme textarea::placeholder {
+  color: #7d8b92;
+}
+
+/* Shared dialog treatment: readable, restrained, and consistent across flows. */
+.dark-theme .app-modal {
+  background: #101c21;
+  border-color: #2a3b43;
+}
+
+.dark-theme .app-modal .border-gray-100,
+.dark-theme .app-modal .border-gray-200 {
+  border-color: #2a3b43;
+}
+
+.dark-theme .app-modal .bg-gray-50 {
+  background-color: #16262c;
+}
+
+.dark-theme .app-modal .bg-brand-50 {
+  background-color: #123a30;
+}
+
+.dark-theme .app-modal .border-brand-200 {
+  border-color: #27725d;
+}
+
+.app-modal label {
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+}
+
+.app-modal :is(input, textarea, select) {
+  font-size: 0.9375rem;
+}
+
+.app-modal button:not([aria-label='Close dialog']) {
+  font-size: 0.875rem;
+}
+
+.app-modal p.text-xs,
+.app-modal span.text-xs {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.dark-theme .launchpad-nav {
+  background-color: rgba(17, 27, 32, 0.94);
+  border-color: #26363d;
+}
+
+.dark-theme .launchpad-hero {
+  background:
+    radial-gradient(ellipse at 50% 44%, rgba(19, 34, 37, 0.96) 0%, rgba(15, 27, 31, 0.88) 45%, rgba(12, 27, 25, 0.9) 100%),
+    linear-gradient(110deg, #10211d 0%, #10191e 48%, #10211d 100%);
+  border-color: var(--border);
+}
+
+.dark-theme .hero-orb-left {
+  background: linear-gradient(145deg, rgba(30, 123, 86, 0.32), rgba(31, 91, 67, 0.14));
+}
+
+.dark-theme .hero-orb-right {
+  background:
+    radial-gradient(ellipse at 72% 48%, rgba(30, 60, 53, 0.42) 0 17%, transparent 18%),
+    linear-gradient(135deg, rgba(39, 114, 84, 0.12), rgba(43, 142, 103, 0.24));
+}
+
+.dark-theme .launchpad-category-section {
+  background: linear-gradient(to bottom, #0d1519, #0b1115);
+}
+
+.dark-theme .launchpad-category-section a.group {
+  background-color: var(--surface);
+  border-color: var(--border);
+}
+
+.dark-theme footer {
+  background-color: #0a1114;
+  border-color: var(--border);
+  color: var(--text-secondary);
+}
+
+.dark-theme footer .border-gray-100 {
+  border-color: var(--border);
+}
+
+.dark-theme .hover\:bg-gray-50:hover,
+.dark-theme .hover\:bg-gray-100:hover {
+  background-color: #203038;
+}
+
+main > div[class*="max-w-"] {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.launchpad-nav {
+  width: min(calc(100% - 2rem), 64rem);
+}
+
+.launchpad-hero {
+  background:
+    radial-gradient(ellipse at 50% 44%, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.85) 42%, rgba(240, 250, 245, 0.8) 100%),
+    linear-gradient(110deg, #f1fbf6 0%, #fff 48%, #effaf5 100%);
+}
+
+.hero-orb {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-orb-left {
+  top: -20%;
+  left: -9%;
+  width: min(32vw, 430px);
+  height: 110%;
+  border-radius: 48% 52% 56% 44% / 34% 39% 61% 66%;
+  background: linear-gradient(145deg, rgba(174, 241, 213, 0.58), rgba(212, 247, 226, 0.23));
+  transform: rotate(-24deg);
+}
+
+.hero-orb-right {
+  top: 2%;
+  right: -7%;
+  width: min(35vw, 460px);
+  height: 92%;
+  border-radius: 55% 45% 45% 55% / 48% 36% 64% 52%;
+  background:
+    radial-gradient(ellipse at 72% 48%, rgba(255, 255, 255, 0.32) 0 17%, transparent 18%),
+    linear-gradient(135deg, rgba(183, 243, 217, 0.22), rgba(111, 218, 174, 0.34));
+  filter: blur(1px);
+  transform: rotate(28deg);
+}
+
+@media (max-width: 640px) {
+  main > div[class*="max-w-"] {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-orb-left {
+    left: -34%;
+    width: 75vw;
+  }
+
+  .hero-orb-right {
+    right: -35%;
+    width: 75vw;
+  }
+}

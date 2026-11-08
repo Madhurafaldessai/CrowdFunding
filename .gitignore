@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment configurations and secrets
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+!.env.example
+
+# Build outputs
+dist/
+**/dist/
+build/
+**/build/
+
+# Logs and system files
+*.log
+.DS_Store
+**/.DS_Store
+
+# Backups
+backups/*.sql
+backups/
+
+
